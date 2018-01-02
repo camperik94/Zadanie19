@@ -8,5 +8,8 @@ public class Zadanie {
 		
 		obl.funkcjaLosuj();
 		obl.minMax();
+		System.out.println("Srednia wynosi " +obl.srednia());
+		obl.liczbaElementow();
+		obl.odwroconaKolejnosc();
 	}
 }

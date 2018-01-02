@@ -2,6 +2,15 @@ import java.util.Random;
 
 public class Obliczenia {
 	private int tablica[];
+	private double srednia;
+	
+	public double getSrednia() {
+		return srednia;
+	}
+
+	public void setSrednia(double srednia) {
+		this.srednia = srednia;
+	}
 
 	public int[] getTablica() {
 		return tablica;
@@ -46,5 +55,36 @@ public class Obliczenia {
 
 	}
 	
+	public double srednia() {
+		double suma = 0;
+		
+		for(int i = 0; i < tablica.length; i++) {
+			suma = suma + tablica[i];
+		}
+		srednia = suma / 10;
+		return srednia;
+	}
 	
+	public void liczbaElementow() {
+		int licznikWyz = 0;
+		int licznikNiz = 0;
+		
+		for(int i = 0; i < tablica.length; i++) {
+			if(tablica[i] > srednia) {
+				licznikWyz++;
+			}
+			if(tablica[i] < srednia) {
+				licznikNiz++;
+			}
+		}
+		System.out.println("Liczba elementow wyzszych niz srednia: " +licznikWyz);
+		System.out.println("Liczba elementow nizszych niz srednia: " +licznikNiz);
+	}
+	
+	public void odwroconaKolejnosc() {
+		for(int i = tablica.length - 1; i>= 0; i--) {
+			System.out.print(tablica[i]);
+			System.out.print(' ');
+		}
+	}
 }
